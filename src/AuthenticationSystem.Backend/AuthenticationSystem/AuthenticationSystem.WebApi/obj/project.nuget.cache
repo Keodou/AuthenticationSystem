@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uEgQ3kbFXyQ88Ipxtq0Rt95r8NL8tKuZf6ZQ58ThVGa15SDJ1sQZ/xprkUaosSNATTXMqZiA3xOMcQCXBeH81g==",
+  "dgSpecHash": "brP14gKCbnKEoEoc6nRohqfCPKLTY6IpWpj7Ca2FKFh6h0Zu/akC1tj9eA3o3OAC6yOBlZWFaQNkXoh65P7MCg==",
   "success": true,
   "projectFilePath": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\AuthenticationSystem.WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\korob\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\korob\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.11\\microsoft.aspnetcore.openapi.7.0.11.nupkg.sha512",
     "C:\\Users\\korob\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\korob\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",

@@ -4,14 +4,14 @@
     "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\AuthenticationSystem.WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\AuthenticationSystem.WebApi.csproj": {
+    "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.Domain\\AuthenticationSystem.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\AuthenticationSystem.WebApi.csproj",
-        "projectName": "AuthenticationSystem.WebApi",
-        "projectPath": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\AuthenticationSystem.WebApi.csproj",
+        "projectUniqueName": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.Domain\\AuthenticationSystem.Domain.csproj",
+        "projectName": "AuthenticationSystem.Domain",
+        "projectPath": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.Domain\\AuthenticationSystem.Domain.csproj",
         "packagesPath": "C:\\Users\\korob\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\obj\\",
+        "outputPath": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\korob\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,7 +39,70 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\AuthenticationSystem.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\AuthenticationSystem.WebApi.csproj",
+        "projectName": "AuthenticationSystem.WebApi",
+        "projectPath": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\AuthenticationSystem.WebApi.csproj",
+        "packagesPath": "C:\\Users\\korob\\.nuget\\packages\\",
+        "outputPath": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\korob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.Domain\\AuthenticationSystem.Domain.csproj": {
+                "projectPath": "D:\\Programming\\CSharp\\AuthenticationSystem\\src\\AuthenticationSystem.Backend\\AuthenticationSystem\\AuthenticationSystem.Domain\\AuthenticationSystem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.11, )"
