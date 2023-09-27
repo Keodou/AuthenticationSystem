@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Service container
 builder.Services.AddControllers();
+builder.Services.AddAuthentication().AddJwtBearer();
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo

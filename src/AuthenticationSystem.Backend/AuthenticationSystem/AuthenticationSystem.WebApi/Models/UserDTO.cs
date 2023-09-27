@@ -1,7 +1,7 @@
 ﻿namespace AuthenticationSystem.WebApi.Models
 {
     /// <summary>
-    /// 
+    /// Input data user.
     /// </summary>
     public class UserDTO
     {
