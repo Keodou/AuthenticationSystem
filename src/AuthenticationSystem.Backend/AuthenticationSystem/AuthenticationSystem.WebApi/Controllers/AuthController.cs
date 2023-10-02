@@ -13,7 +13,7 @@ namespace AuthenticationSystem.WebApi.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private User _user = new User();
+        private static List<User> Users = new List<User>();
 
         public AuthController(IConfiguration configuration)
         {
@@ -29,12 +29,20 @@ namespace AuthenticationSystem.WebApi.Controllers
         public ActionResult<User> Register(UserDTO request)
         {
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
+            var user = new User
+            {
+                Id = Guid.NewGuid(),
+                Login = request.Login,
+                PasswordHash = passwordHash
+            };
 
-            _user.Id = Guid.NewGuid();
-            _user.Login = request.Login;
-            _user.PasswordHash = passwordHash;
+            if (Users.Select(u => u.Login).Contains(user.Login))
+            {
+                return BadRequest("Such a user already exists.");
+            }
 
-            return Ok(_user);
+            Users.Add(user);
+            return Ok(Users[0]);
         }
 
         /// <summary>
@@ -45,17 +53,19 @@ namespace AuthenticationSystem.WebApi.Controllers
         [HttpPost("Login")]
         public ActionResult<User> Login(UserDTO request)
         {
-            if (_user.Login != request.Login)
+            var user = Users.FirstOrDefault(u => u.Login == request.Login);
+
+            if (user == null)
             {
                 return BadRequest("User not found.");
             }
 
-            if (!BCrypt.Net.BCrypt.Verify(request.Password, _user.PasswordHash))
+            if (!BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
             {
                 return BadRequest("Wrong password.");
             }
 
-            string token = CreateToken(_user);
+            string token = CreateToken(user);
             return Ok(token);
         }
 
